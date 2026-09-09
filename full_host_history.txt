@@ -1,0 +1,6 @@
+    1  ls -lh OpenLane/designs/fir_new/runs/RUN_2026.09.09_21.19.58/results/magic/fir_new.gds
+    2  ls -lh OpenLane/designs/fir_new/runs/RUN_2026.09.09_21.19.58/results/signoff/fir_new.gds
+    3  ls -lh OpenLane/designs/fir_new/runs/RUN_2026.09.09_21.19.58/results/signoff/fir_new.magic.gds
+    4  history
+    5  cat ~/.bash_history > full_host_history.txt
+    6  history >> full_host_history.txt
