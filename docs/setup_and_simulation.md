@@ -1,4 +1,4 @@
-# Chapter 4: Local Simulation Setup & Execution Guide
+# Chapter 3: Local Simulation Setup & Execution Guide
 
 ## 1. Local Simulation Setup & Execution Commands (`iverilog`)
 Before running physical layout synthesis, performed functional verification locally using an open-source HDL simulator (Icarus Verilog) and a waveform viewer (GTKWave).
