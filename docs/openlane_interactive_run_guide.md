@@ -1,4 +1,4 @@
-# Chapter 5: OpenLane Environment Setup & Interactive ASIC Flow Guide
+# Chapter 4: OpenLane Environment Setup & Interactive ASIC Flow Guide
 
 ## 1. Overview
 
