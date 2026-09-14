@@ -1,0 +1,20 @@
+{
+  "DESIGN_NAME": "fir_new",
+  "VERILOG_FILES": "dir::src/*.v",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 50.0,
+  "DESIGN_IS_CORE": true,
+  "SYNTH_MAX_FANOUT": 12,
+  "SYNTH_STRATEGY": "AREA 3",
+  "SYNTH_SIZING": 1,
+  "SYNTH_BUFFERING": 1,
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 510 510",
+  "CORE_AREA": "6 13 500 500",
+  "FP_PDN_CORE_RING": true,
+  "PL_TARGET_DENSITY": 0.48,
+  "FP_PDN_VPITCH": 153.6,
+  "FP_PDN_VOFFSET": 307.2,
+  "FP_PDN_HPITCH": 7,
+  "FP_PDN_HOFFSET": 14
+}
