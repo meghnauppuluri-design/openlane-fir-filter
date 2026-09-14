@@ -1,4 +1,4 @@
-# OpenLane RTL-to-GDSII Flow Report: 15-Tap Low-Pass FIR Filter
+# Chapter 5: OpenLane RTL-to-GDSII Flow Report: 15-Tap Low-Pass FIR Filter
 
 This document outlines the complete implementation of a 15-tap low-pass finite impulse response (FIR) filter targeting the SkyWater 130nm (`sky130A`) process node using open-source EDA tools (OpenLane, Yosys, OpenROAD, Magic, and Netgen).
 
