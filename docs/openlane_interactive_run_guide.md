@@ -97,8 +97,6 @@ run_floorplan
 ```
 **Explanation:** Allocates core rows, inserts well-tap cells to prevent latch-up, and routes global power lines across metal layers.
 
----
-
 ### Step 6: Standard Cell Placement
 
 Distributes and places standard cells uniformly across the core floorplan area:
@@ -107,8 +105,6 @@ Distributes and places standard cells uniformly across the core floorplan area:
 run_placement
 ```
 **Explanation:** Executes global and detailed placement algorithms to optimize wire length and minimize routing congestion.
-
----
 
 ### Step 7: Clock Tree Synthesis (CTS)
 
@@ -119,8 +115,6 @@ run_cts
 ```
 **Explanation:** Inserts clock buffers along the clock tree paths for the master clock signal (`clk`).
 
----
-
 ### Step 8: Global and Detailed Routing
 
 Routes all standard cell pin connections using available metal layers according to process design rules.
@@ -128,7 +122,6 @@ Routes all standard cell pin connections using available metal layers according 
 ```tcl
 run_routing
 ```
----
 
 ### Step 9: Physical Signoff Verification (DRC & LVS)
 
