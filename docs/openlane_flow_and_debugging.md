@@ -52,6 +52,8 @@ This document outlines the complete implementation of a 15-tap low-pass finite i
   "DESIGN_IS_CORE": true,
   "SYNTH_MAX_FANOUT": 25,
   "SYNTH_STRATEGY": "AREA 3",
+  "SYNTH_SIZING": 1,
+  "SYNTH_BUFFERING": 1,
   "FP_SIZING": "absolute",
   "DIE_AREA": "0 0 510 510",
   "CORE_AREA": "6 13 500 500",
