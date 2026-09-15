@@ -1,0 +1,1585 @@
+
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: /openlane/designs/fir_filter/src/fir_filter.v
+Parsing SystemVerilog input from `/openlane/designs/fir_filter/src/fir_filter.v' to AST representation.
+Generating RTLIL representation for module `\fir_filter'.
+Warning: Replacing memory \acc with list of registers. See /openlane/designs/fir_filter/src/fir_filter.v:34
+Successfully finished Verilog frontend.
+
+2. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/hierarchy.dot'.
+Dumping module fir_filter to page 1.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \fir_filter
+
+3.2. Analyzing design hierarchy..
+Top module:  \fir_filter
+Removed 0 unused modules.
+
+4. Executing TRIBUF pass.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \fir_filter
+
+5.2. Analyzing design hierarchy..
+Top module:  \fir_filter
+Removed 0 unused modules.
+
+6. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3 in module fir_filter.
+Removed a total of 0 dead cases.
+
+8. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 16 redundant assignments.
+Promoted 16 assignments to connections.
+
+9. Executing PROC_INIT pass (extract init attributes).
+
+10. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+
+11. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+12. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+Creating decoders for process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+     1/17: $0\filter_out[31:0]
+     2/17: $1\i[31:0]
+     3/17: $0\acc[14][31:0]
+     4/17: $0\acc[13][31:0]
+     5/17: $0\acc[12][31:0]
+     6/17: $0\acc[11][31:0]
+     7/17: $0\acc[10][31:0]
+     8/17: $0\acc[9][31:0]
+     9/17: $0\acc[8][31:0]
+    10/17: $0\acc[7][31:0]
+    11/17: $0\acc[6][31:0]
+    12/17: $0\acc[5][31:0]
+    13/17: $0\acc[4][31:0]
+    14/17: $0\acc[3][31:0]
+    15/17: $0\acc[2][31:0]
+    16/17: $0\acc[1][31:0]
+    17/17: $0\acc[0][31:0]
+
+13. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\fir_filter.\b[0]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[1]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[2]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[3]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[4]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[5]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[6]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[7]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[8]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[9]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[10]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[11]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[12]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[13]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+No latch inferred for signal `\fir_filter.\b[14]' from process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+
+14. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\fir_filter.\filter_out' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$34' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\i' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$35' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[0]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$36' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[1]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$37' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[2]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$38' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[3]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$39' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[4]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$40' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[5]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$41' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[6]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$42' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[7]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$43' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[8]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$44' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[9]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$45' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[10]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$46' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[11]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$47' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[12]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$48' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[13]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$49' with positive edge clock and positive level reset.
+Creating register for signal `\fir_filter.\acc[14]' using process `\fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+  created $adff cell `$procdff$50' with positive edge clock and positive level reset.
+
+15. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+16. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:0$33'.
+Removing empty process `fir_filter.$proc$/openlane/designs/fir_filter/src/fir_filter.v:31$3'.
+Cleaned up 0 empty switches.
+
+17. Executing CHECK pass (checking for obvious problems).
+Checking module fir_filter...
+Found and reported 0 problems.
+
+18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+<suppressed ~15 debug messages>
+
+19. Executing FLATTEN pass (flatten design).
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 1 unused cells and 34 unused wires.
+<suppressed ~3 debug messages>
+
+22. Executing OPT pass (performing simple optimizations).
+
+22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+22.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+22.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+22.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+22.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$36 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$36 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$36 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$36 ($adff) from module fir_filter.
+
+22.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+22.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+22.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+22.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+22.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+22.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+22.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+22.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+22.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+22.16. Finished OPT passes. (There is nothing left to do.)
+
+23. Executing FSM pass (extract and optimize FSM).
+
+23.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+23.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+23.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+23.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+23.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+23.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+23.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+24. Executing OPT pass (performing simple optimizations).
+
+24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+24.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+24.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+24.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+24.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+24.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+24.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+24.9. Finished OPT passes. (There is nothing left to do.)
+
+25. Executing WREDUCE pass (reducing word size of cells).
+Removed top 8 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:39$4 ($mul).
+Removed top 8 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:39$4 ($mul).
+Removed top 8 bits (of 28) from FF cell fir_filter.$auto$ff.cc:266:slice$51 ($adff).
+Removed top 2 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$11 ($mul).
+Removed top 2 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$11 ($mul).
+Removed top 2 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$12 ($add).
+Removed top 2 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$13 ($mul).
+Removed top 2 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$13 ($mul).
+Removed top 2 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$14 ($add).
+Removed top 1 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$15 ($mul).
+Removed top 1 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$15 ($mul).
+Removed top 1 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$16 ($add).
+Removed top 1 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$17 ($mul).
+Removed top 1 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$17 ($mul).
+Removed top 1 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$18 ($add).
+Removed top 1 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$20 ($add).
+Removed top 2 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$22 ($add).
+Removed top 2 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$24 ($add).
+Removed top 3 bits (of 11) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$25 ($mul).
+Removed top 3 bits (of 27) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$25 ($mul).
+Removed top 3 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$26 ($add).
+Removed top 4 bits (of 12) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$27 ($mul).
+Removed top 4 bits (of 28) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$27 ($mul).
+Removed top 4 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$28 ($add).
+Removed top 6 bits (of 11) from port B of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$29 ($mul).
+Removed top 6 bits (of 27) from port Y of cell fir_filter.$mul$/openlane/designs/fir_filter/src/fir_filter.v:41$29 ($mul).
+Removed top 6 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$30 ($add).
+Removed top 8 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$32 ($add).
+Removed top 8 bits (of 32) from port A of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$6 ($add).
+Removed top 6 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$6 ($add).
+Removed top 5 bits (of 32) from port Y of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$6 ($add).
+Removed top 4 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$8 ($add).
+Removed top 3 bits (of 32) from port B of cell fir_filter.$add$/openlane/designs/fir_filter/src/fir_filter.v:41$10 ($add).
+
+26. Executing PEEPOPT pass (run peephole optimizers).
+
+27. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+28. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module fir_filter:
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$10 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$12 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$14 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$16 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$18 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$20 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$22 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$24 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$26 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$28 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$30 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$32 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$6 ($add).
+  creating $macc model for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$8 ($add).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:39$4 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$11 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$13 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$15 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$17 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$25 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$27 ($mul).
+  creating $macc model for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$29 ($mul).
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$8.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$6.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$32.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$30.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$28.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$26.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$24.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$22.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$20.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$18.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$16.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$14.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$12.
+  creating $alu model for $macc $add$/openlane/designs/fir_filter/src/fir_filter.v:41$10.
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:39$4: $auto$alumacc.cc:365:replace_macc$52
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$11: $auto$alumacc.cc:365:replace_macc$53
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$13: $auto$alumacc.cc:365:replace_macc$54
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$15: $auto$alumacc.cc:365:replace_macc$55
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$17: $auto$alumacc.cc:365:replace_macc$56
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$25: $auto$alumacc.cc:365:replace_macc$57
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$27: $auto$alumacc.cc:365:replace_macc$58
+  creating $macc cell for $mul$/openlane/designs/fir_filter/src/fir_filter.v:41$29: $auto$alumacc.cc:365:replace_macc$59
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$10: $auto$alumacc.cc:485:replace_alu$60
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$12: $auto$alumacc.cc:485:replace_alu$63
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$14: $auto$alumacc.cc:485:replace_alu$66
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$16: $auto$alumacc.cc:485:replace_alu$69
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$18: $auto$alumacc.cc:485:replace_alu$72
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$20: $auto$alumacc.cc:485:replace_alu$75
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$22: $auto$alumacc.cc:485:replace_alu$78
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$24: $auto$alumacc.cc:485:replace_alu$81
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$26: $auto$alumacc.cc:485:replace_alu$84
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$28: $auto$alumacc.cc:485:replace_alu$87
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$30: $auto$alumacc.cc:485:replace_alu$90
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$32: $auto$alumacc.cc:485:replace_alu$93
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$6: $auto$alumacc.cc:485:replace_alu$96
+  creating $alu cell for $add$/openlane/designs/fir_filter/src/fir_filter.v:41$8: $auto$alumacc.cc:485:replace_alu$99
+  created 14 $alu and 8 $macc cells.
+
+29. Executing SHARE pass (SAT-based resource sharing).
+
+30. Executing OPT pass (performing simple optimizations).
+
+30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+30.9. Finished OPT passes. (There is nothing left to do.)
+
+31. Executing MEMORY pass.
+
+31.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+31.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+31.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+31.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+31.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+31.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+31.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+31.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+31.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+31.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+<suppressed ~14 debug messages>
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+33.5. Finished fast OPT passes.
+
+34. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+35. Executing OPT pass (performing simple optimizations).
+
+35.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.6. Executing OPT_SHARE pass.
+
+35.7. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$37 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$37 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$37 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$37 ($adff) from module fir_filter.
+
+35.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.14. Executing OPT_SHARE pass.
+
+35.15. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$38 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$38 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$38 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$38 ($adff) from module fir_filter.
+
+35.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.22. Executing OPT_SHARE pass.
+
+35.23. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$39 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$39 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$39 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$39 ($adff) from module fir_filter.
+
+35.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.30. Executing OPT_SHARE pass.
+
+35.31. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$40 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$40 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$40 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$40 ($adff) from module fir_filter.
+
+35.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.34. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.35. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.36. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.37. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.38. Executing OPT_SHARE pass.
+
+35.39. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$41 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$41 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$41 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$41 ($adff) from module fir_filter.
+
+35.40. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.41. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.42. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.43. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.44. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.45. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.46. Executing OPT_SHARE pass.
+
+35.47. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$42 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$42 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$42 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$42 ($adff) from module fir_filter.
+
+35.48. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.49. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.50. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.51. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.52. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.53. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.54. Executing OPT_SHARE pass.
+
+35.55. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$43 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$43 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$43 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$43 ($adff) from module fir_filter.
+
+35.56. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.57. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.58. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.59. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.60. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.62. Executing OPT_SHARE pass.
+
+35.63. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$44 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$44 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$44 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$44 ($adff) from module fir_filter.
+
+35.64. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.65. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.66. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.67. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.68. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.69. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.70. Executing OPT_SHARE pass.
+
+35.71. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$45 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$45 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$45 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$45 ($adff) from module fir_filter.
+
+35.72. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.73. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.74. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.75. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.76. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.77. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.78. Executing OPT_SHARE pass.
+
+35.79. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$46 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$46 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$46 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$46 ($adff) from module fir_filter.
+
+35.80. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.81. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.82. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.83. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.84. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.85. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.86. Executing OPT_SHARE pass.
+
+35.87. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$47 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$47 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$47 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$47 ($adff) from module fir_filter.
+
+35.88. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.89. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.90. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.91. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.92. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.93. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.94. Executing OPT_SHARE pass.
+
+35.95. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$48 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$48 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$48 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$48 ($adff) from module fir_filter.
+
+35.96. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.97. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.98. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.99. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.100. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.101. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.102. Executing OPT_SHARE pass.
+
+35.103. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$49 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$49 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$49 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$49 ($adff) from module fir_filter.
+
+35.104. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.105. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.106. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.107. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.108. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.109. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.110. Executing OPT_SHARE pass.
+
+35.111. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$50 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$50 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$50 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$50 ($adff) from module fir_filter.
+
+35.112. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.113. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.114. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.115. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.116. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.117. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.118. Executing OPT_SHARE pass.
+
+35.119. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$34 ($adff) from module fir_filter.
+Setting constant 0-bit at position 1 on $procdff$34 ($adff) from module fir_filter.
+Setting constant 0-bit at position 2 on $procdff$34 ($adff) from module fir_filter.
+Setting constant 0-bit at position 3 on $procdff$34 ($adff) from module fir_filter.
+
+35.120. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.121. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.122. Rerunning OPT passes. (Maybe there is more to do..)
+
+35.123. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+35.124. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+35.125. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+35.126. Executing OPT_SHARE pass.
+
+35.127. Executing OPT_DFF pass (perform DFF optimizations).
+
+35.128. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+35.129. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+35.130. Finished OPT passes. (There is nothing left to do.)
+
+36. Executing TECHMAP pass (map to technology primitives).
+
+36.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+36.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc.
+  add \filter_in * 10'0101010001 (16x10 bits, signed)
+Using template $paramod$744b15af4e5386a71f8eddbb36d88ac9c17f23bd\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$d3c4a3cce9cefd370c8c89587a5a507f7bc3d62f\_90_alu for cells of type $alu.
+  add \filter_in * 10'0111001101 (16x10 bits, signed)
+  add \filter_in * 11'01000010111 (16x11 bits, signed)
+Using template $paramod$7e28bb63543f995f55b6bb23e979e9048e1e2673\_90_alu for cells of type $alu.
+  add \filter_in * 11'01000110001 (16x11 bits, signed)
+  add \filter_in * 8'01100101 (16x8 bits, signed)
+  add \filter_in * 4'0101 (16x4 bits, signed)
+Using template $paramod$a79ef06c44d1d97f57fe5a251d9f5cd54eba82c9\_90_alu for cells of type $alu.
+  add \filter_in * 8'01011011 (16x8 bits, signed)
+  add \filter_in * 5'01101 (16x5 bits, signed)
+Using template $paramod$d169171a30e7f7c74b48b5ec0dcf6b349904964d\_90_alu for cells of type $alu.
+Using template $paramod$d6f15f07e263c7423e77839ba2298944ba563581\_90_alu for cells of type $alu.
+Using template $paramod$636bf66571d0da59fd0f8048459da0b6e7920ae6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011010 for cells of type $fa.
+Using template $paramod$7af98a8d3d01ff58dee4212ab52569c379e064a1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011011 for cells of type $fa.
+Using template $paramod$f02bbbf710bba6238f4bdfa41b3051acfe2064a8\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011000 for cells of type $fa.
+Using template $paramod$e82d3fc1811c5751348a3964470632b35a435fc7\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010100 for cells of type $fa.
+Using template $paramod$6fc37af1c109ae54e8aed83fcd995c12d378ce93\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010101 for cells of type $fa.
+Using template $paramod$950cc9f9d9b07c09d0ee4a231126f2c8a3c4f78a\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010101 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~4284 debug messages>
+
+37. Executing OPT pass (performing simple optimizations).
+
+37.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+<suppressed ~7179 debug messages>
+
+37.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+<suppressed ~2037 debug messages>
+Removed a total of 679 cells.
+
+37.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+37.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 691 unused cells and 1564 unused wires.
+<suppressed ~692 debug messages>
+
+37.5. Finished fast OPT passes.
+
+38. Executing ABC pass (technology mapping using ABC).
+
+38.1. Extracting gate netlist of module `\fir_filter' to `<abc-temp-dir>/input.blif'..
+Extracted 5074 gates and 5465 wires to a netlist network with 391 inputs and 401 outputs.
+
+38.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+38.1.2. Re-integrating ABC results.
+ABC RESULTS:               MUX cells:        2
+ABC RESULTS:              NAND cells:       44
+ABC RESULTS:               AND cells:      122
+ABC RESULTS:              XNOR cells:      216
+ABC RESULTS:             ORNOT cells:      355
+ABC RESULTS:               NOT cells:      220
+ABC RESULTS:                OR cells:      713
+ABC RESULTS:               NOR cells:      658
+ABC RESULTS:            ANDNOT cells:     1514
+ABC RESULTS:               XOR cells:     1428
+ABC RESULTS:        internal signals:     4673
+ABC RESULTS:           input signals:      391
+ABC RESULTS:          output signals:      401
+Removing temp directory.
+
+39. Executing OPT pass (performing simple optimizations).
+
+39.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+39.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+<suppressed ~54 debug messages>
+Removed a total of 18 cells.
+
+39.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 0 unused cells and 2524 unused wires.
+<suppressed ~1 debug messages>
+
+39.5. Finished fast OPT passes.
+
+40. Executing HIERARCHY pass (managing design hierarchy).
+
+40.1. Analyzing design hierarchy..
+Top module:  \fir_filter
+
+40.2. Analyzing design hierarchy..
+Top module:  \fir_filter
+Removed 0 unused modules.
+
+41. Printing statistics.
+
+=== fir_filter ===
+
+   Number of wires:               4917
+   Number of wire bits:           6433
+   Number of public wires:          34
+   Number of public wire bits:     770
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5689
+     $_ANDNOT_                    1512
+     $_AND_                        113
+     $_DFF_PP0_                    435
+     $_MUX_                          2
+     $_NAND_                        43
+     $_NOR_                        658
+     $_NOT_                        219
+     $_ORNOT_                      354
+     $_OR_                         712
+     $_XNOR_                       215
+     $_XOR_                       1426
+
+42. Executing CHECK pass (checking for obvious problems).
+Checking module fir_filter...
+Found and reported 0 problems.
+
+43. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/post_techmap.dot'.
+Dumping module fir_filter to page 1.
+
+44. Executing SHARE pass (SAT-based resource sharing).
+
+45. Executing OPT pass (performing simple optimizations).
+
+45.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+45.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+45.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fir_filter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+45.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fir_filter.
+Performed a total of 0 changes.
+
+45.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fir_filter'.
+Removed a total of 0 cells.
+
+45.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+45.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+
+45.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir_filter.
+
+45.9. Finished OPT passes. (There is nothing left to do.)
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~15 debug messages>
+
+47. Printing statistics.
+
+=== fir_filter ===
+
+   Number of wires:               4902
+   Number of wire bits:           6193
+   Number of public wires:          19
+   Number of public wire bits:     530
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5689
+     $_ANDNOT_                    1512
+     $_AND_                        113
+     $_DFF_PP0_                    435
+     $_MUX_                          2
+     $_NAND_                        43
+     $_NOR_                        658
+     $_NOT_                        219
+     $_ORNOT_                      354
+     $_OR_                         712
+     $_XNOR_                       215
+     $_XOR_                       1426
+
+mapping tbuf
+
+48. Executing TECHMAP pass (map to technology primitives).
+
+48.1. Executing Verilog-2005 frontend: /home/codespace/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/codespace/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+48.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+49. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/codespace/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/codespace/.ciel/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+52. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+52.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\fir_filter':
+  mapped 435 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+
+53. Printing statistics.
+
+=== fir_filter ===
+
+   Number of wires:               5337
+   Number of wire bits:           6628
+   Number of public wires:          19
+   Number of public wire bits:     530
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6124
+     $_ANDNOT_                    1512
+     $_AND_                        113
+     $_MUX_                          2
+     $_NAND_                        43
+     $_NOR_                        658
+     $_NOT_                        654
+     $_ORNOT_                      354
+     $_OR_                         712
+     $_XNOR_                       215
+     $_XOR_                       1426
+     sky130_fd_sc_hd__dfrtp_2      435
+
+[INFO]: USING STRATEGY AREA 3
+
+54. Executing ABC pass (technology mapping using ABC).
+
+54.1. Extracting gate netlist of module `\fir_filter' to `/tmp/yosys-abc-Lnmayc/input.blif'..
+Extracted 5689 gates and 6081 wires to a netlist network with 392 inputs and 836 outputs.
+
+54.1.1. Executing ABC.
+Running ABC command: "/build/bin/yosys-abc" -s -f /tmp/yosys-abc-Lnmayc/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-Lnmayc/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-Lnmayc/input.blif 
+ABC: + read_lib -w /openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130A_merged" from "/openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.08 sec
+ABC: Memory =    9.54 MB. Time =     0.08 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /openlane/designs/fir_filter/runs/RUN_2026.09.09_21.19.58/tmp/synthesis/synthesis.sdc 
+ABC: + strash 
+ABC: + dch 
+ABC: + map -B 0.9 
+ABC: The cell delays are multiplied by the factor: <num_fanins> ^ (0.90).
+ABC: + topo 
+ABC: + stime -c 
+ABC: WireLoad = "Small"  Gates =   7001 ( 19.2 %)   Cap = 11.8 ff (  2.4 %)   Area =    47187.76 ( 80.8 %)   Delay =  7057.18 ps  (  9.6 %)               
+ABC: + buffer -c -N 12 
+ABC: + upsize -c 
+ABC: + dnsize -c 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =   7289 ( 22.4 %)   Cap = 11.3 ff (  5.9 %)   Area =    50275.72 ( 73.2 %)   Delay =  3704.94 ps  ( 35.8 %)               
+ABC: Path  0 --       2 : 0    1 pi                        A =   0.00  Df =  32.7  -18.6 ps  S =  51.0 ps  Cin =  0.0 ff  Cout =   9.6 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --    1234 : 1   12 sky130_fd_sc_hd__buf_12   A =  20.02  Df = 174.2  -21.3 ps  S =  92.4 ps  Cin =  9.2 ff  Cout =  70.2 ff  Cmax =5000.0 ff  G =  737  
+ABC: Path  2 --    1235 : 1    6 sky130_fd_sc_hd__inv_6    A =   8.76  Df = 231.4   -4.3 ps  S =  67.9 ps  Cin = 13.3 ff  Cout =  30.2 ff  Cmax = 782.8 ff  G =  219  
+ABC: Path  3 --    1236 : 2    1 sky130_fd_sc_hd__nand2_2  A =   6.26  Df = 296.6   -9.4 ps  S =  44.7 ps  Cin =  4.4 ff  Cout =   4.6 ff  Cmax = 295.7 ff  G =  100  
+ABC: Path  4 --    1238 : 2    3 sky130_fd_sc_hd__nand2_2  A =   6.26  Df = 372.5  -25.1 ps  S =  80.0 ps  Cin =  4.4 ff  Cout =  11.7 ff  Cmax = 295.7 ff  G =  253  
+ABC: Path  5 --    1239 : 2    1 sky130_fd_sc_hd__or2_4    A =   8.76  Df = 573.6  -85.6 ps  S =  46.7 ps  Cin =  2.4 ff  Cout =   4.9 ff  Cmax = 514.5 ff  G =  193  
+ABC: Path  6 --    1240 : 1    5 sky130_fd_sc_hd__buf_6    A =  11.26  Df = 709.1 -100.7 ps  S =  78.2 ps  Cin =  4.6 ff  Cout =  33.9 ff  Cmax = 785.5 ff  G =  706  
+ABC: Path  7 --    1253 : 2    5 sky130_fd_sc_hd__or2_4    A =   8.76  Df = 980.6  -44.8 ps  S =  71.2 ps  Cin =  2.4 ff  Cout =  18.9 ff  Cmax = 514.5 ff  G =  757  
+ABC: Path  8 --    1268 : 2    2 sky130_fd_sc_hd__or2_4    A =   8.76  Df =1241.8 -180.5 ps  S =  53.5 ps  Cin =  2.4 ff  Cout =   9.1 ff  Cmax = 514.5 ff  G =  370  
+ABC: Path  9 --    1285 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1304.4 -197.7 ps  S =  53.4 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax = 295.7 ff  G =  131  
+ABC: Path 10 --    1287 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1360.9 -188.2 ps  S =  67.2 ps  Cin =  4.4 ff  Cout =   9.2 ff  Cmax = 295.7 ff  G =  200  
+ABC: Path 11 --    1304 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1419.9 -195.5 ps  S =  52.0 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax = 295.7 ff  G =  131  
+ABC: Path 12 --    1306 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1487.3 -180.8 ps  S =  87.9 ps  Cin =  4.4 ff  Cout =  13.4 ff  Cmax = 295.7 ff  G =  292  
+ABC: Path 13 --    1323 : 2    4 sky130_fd_sc_hd__nand2_4  A =  11.26  Df =1559.2 -192.7 ps  S =  61.3 ps  Cin =  8.7 ff  Cout =  13.2 ff  Cmax = 530.1 ff  G =  146  
+ABC: Path 14 --    1392 : 3    1 sky130_fd_sc_hd__nand3b_2 A =  11.26  Df =1632.6 -195.6 ps  S =  66.0 ps  Cin =  3.5 ff  Cout =   4.6 ff  Cmax = 263.7 ff  G =  127  
+ABC: Path 15 --    1394 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1700.3 -211.9 ps  S =  52.0 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax = 295.7 ff  G =  131  
+ABC: Path 16 --    1396 : 2    3 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1768.5 -197.4 ps  S =  88.8 ps  Cin =  4.4 ff  Cout =  13.6 ff  Cmax = 295.7 ff  G =  298  
+ABC: Path 17 --    1425 : 3    1 sky130_fd_sc_hd__nand3_2  A =  10.01  Df =1831.1 -193.7 ps  S =  55.4 ps  Cin =  4.4 ff  Cout =   4.6 ff  Cmax = 260.0 ff  G =   99  
+ABC: Path 18 --    1426 : 2    3 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =1894.3 -173.4 ps  S =  80.2 ps  Cin =  4.4 ff  Cout =  11.8 ff  Cmax = 295.7 ff  G =  253  
+ABC: Path 19 --    1427 : 2    3 sky130_fd_sc_hd__or2_4    A =   8.76  Df =2135.6 -283.7 ps  S =  56.7 ps  Cin =  2.4 ff  Cout =  11.4 ff  Cmax = 514.5 ff  G =  465  
+ABC: Path 20 --    1445 : 3    1 sky130_fd_sc_hd__a21o_2   A =   8.76  Df =2327.5 -360.4 ps  S =  39.0 ps  Cin =  2.4 ff  Cout =   4.6 ff  Cmax = 309.5 ff  G =  188  
+ABC: Path 21 --    1447 : 2    1 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =2395.9 -136.3 ps  S =  68.4 ps  Cin =  4.4 ff  Cout =   9.4 ff  Cmax = 295.7 ff  G =  203  
+ABC: Path 22 --    1448 : 1    4 sky130_fd_sc_hd__inv_4    A =   6.26  Df =2466.9  -89.1 ps  S = 128.4 ps  Cin =  9.0 ff  Cout =  45.3 ff  Cmax = 563.1 ff  G =  496  
+ABC: Path 23 --    7740 : 2    2 sky130_fd_sc_hd__or2_4    A =   8.76  Df =2704.9 -184.5 ps  S =  53.3 ps  Cin =  2.4 ff  Cout =   9.0 ff  Cmax = 514.5 ff  G =  367  
+ABC: Path 24 --    7751 : 3    2 sky130_fd_sc_hd__nand3_2  A =  10.01  Df =2774.5 -138.4 ps  S =  66.3 ps  Cin =  4.4 ff  Cout =   7.3 ff  Cmax = 260.0 ff  G =  154  
+ABC: Path 25 --    7754 : 3    1 sky130_fd_sc_hd__o21a_2   A =   8.76  Df =2909.4  -60.3 ps  S =  61.4 ps  Cin =  2.4 ff  Cout =   8.8 ff  Cmax = 294.8 ff  G =  363  
+ABC: Path 26 --    7763 : 3    4 sky130_fd_sc_hd__nand3_4  A =  17.52  Df =2988.2  -30.3 ps  S =  87.6 ps  Cin =  8.7 ff  Cout =  16.2 ff  Cmax = 469.7 ff  G =  180  
+ABC: Path 27 --    7780 : 3    2 sky130_fd_sc_hd__a21o_2   A =   8.76  Df =3194.4  -99.2 ps  S =  50.2 ps  Cin =  2.4 ff  Cout =   7.1 ff  Cmax = 309.5 ff  G =  289  
+ABC: Path 28 --    7781 : 2    1 sky130_fd_sc_hd__or2_4    A =   8.76  Df =3409.4 -216.8 ps  S =  42.3 ps  Cin =  2.4 ff  Cout =   2.4 ff  Cmax = 514.5 ff  G =   97  
+ABC: Path 29 --    7783 : 2    1 sky130_fd_sc_hd__and2_4   A =   8.76  Df =3534.0 -152.4 ps  S =  29.0 ps  Cin =  2.4 ff  Cout =   1.8 ff  Cmax = 539.3 ff  G =   72  
+ABC: Path 30 --    7784 : 1    1 sky130_fd_sc_hd__buf_2    A =   5.00  Df =3704.9 -133.8 ps  S = 168.9 ps  Cin =  1.7 ff  Cout =  33.4 ff  Cmax = 315.9 ff  G = 1936  
+ABC: Start-point = pi1 (\filter_in [1]).  End-point = po368 ($auto$alumacc.cc:485:replace_alu$93.Y [18]).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =  392/  836  lat =    0  nd =  7289  edge =  14133  area =50287.54  delay =2509.65  lev = 46
+ABC: + write_blif /tmp/yosys-abc-Lnmayc/output.blif 
+
+54.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__buf_12 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_6 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand2_8 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__buf_8 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21o_4 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_4 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_4 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_4 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2b_4 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__bufinv_8 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_4 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_4 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_4 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_4 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_4 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_4 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__buf_4 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_4 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:       36
+ABC RESULTS:   sky130_fd_sc_hd__nand2_4 cells:       73
+ABC RESULTS:   sky130_fd_sc_hd__xor2_4 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:       61
+ABC RESULTS:   sky130_fd_sc_hd__or2b_2 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__nand3_4 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__buf_6 cells:       33
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:       51
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:       97
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:       40
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:       93
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:       88
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:       37
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       74
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:      113
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:      367
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:      228
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:       60
+ABC RESULTS:   sky130_fd_sc_hd__or2_4 cells:      152
+ABC RESULTS:   sky130_fd_sc_hd__and2_4 cells:       36
+ABC RESULTS:   sky130_fd_sc_hd__buf_2 cells:       56
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:      592
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:     2925
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:      394
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:      180
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:     1321
+ABC RESULTS:        internal signals:     4853
+ABC RESULTS:           input signals:      392
+ABC RESULTS:          output signals:      836
+Removing temp directory.
+
+55. Executing SETUNDEF pass (replace undef values with defined constants).
+
+56. Executing HILOMAP pass (mapping to constant drivers).
+
+57. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+58. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fir_filter..
+Removed 60 unused cells and 6627 unused wires.
+<suppressed ~134 debug messages>
+
+59. Executing INSBUF pass (insert buffer cells for connected wires).
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module fir_filter...
+Warning: Wire fir_filter.\filter_out [31] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [30] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [29] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [28] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [27] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [26] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [25] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [24] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [23] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [22] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [21] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [20] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [19] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [18] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [17] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [16] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [15] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [14] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [13] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [12] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [11] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [10] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [9] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [8] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [7] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [6] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [5] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [4] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [3] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [2] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [1] is used but has no driver.
+Warning: Wire fir_filter.\filter_out [0] is used but has no driver.
+Found and reported 32 problems.
+
+61. Printing statistics.
+
+=== fir_filter ===
+
+   Number of wires:               7700
+   Number of wire bits:           7746
+   Number of public wires:         411
+   Number of public wire bits:     457
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7728
+     sky130_fd_sc_hd__a2111o_2       1
+     sky130_fd_sc_hd__a21bo_2       40
+     sky130_fd_sc_hd__a21boi_2      61
+     sky130_fd_sc_hd__a21boi_4       1
+     sky130_fd_sc_hd__a21o_2        88
+     sky130_fd_sc_hd__a21o_4         1
+     sky130_fd_sc_hd__a21oi_2       93
+     sky130_fd_sc_hd__a21oi_4       12
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__and2_2       228
+     sky130_fd_sc_hd__and2_4        36
+     sky130_fd_sc_hd__and2b_2       37
+     sky130_fd_sc_hd__and3_2         8
+     sky130_fd_sc_hd__and3_4         1
+     sky130_fd_sc_hd__buf_1        180
+     sky130_fd_sc_hd__buf_12         3
+     sky130_fd_sc_hd__buf_2         56
+     sky130_fd_sc_hd__buf_4         11
+     sky130_fd_sc_hd__buf_6         33
+     sky130_fd_sc_hd__buf_8          7
+     sky130_fd_sc_hd__bufinv_8       1
+     sky130_fd_sc_hd__conb_1         4
+     sky130_fd_sc_hd__dfrtp_2      435
+     sky130_fd_sc_hd__inv_2       1321
+     sky130_fd_sc_hd__inv_4         14
+     sky130_fd_sc_hd__inv_6          5
+     sky130_fd_sc_hd__nand2_2     2925
+     sky130_fd_sc_hd__nand2_4       73
+     sky130_fd_sc_hd__nand2_8        3
+     sky130_fd_sc_hd__nand2b_2      36
+     sky130_fd_sc_hd__nand2b_4       6
+     sky130_fd_sc_hd__nand3_2      592
+     sky130_fd_sc_hd__nand3_4       10
+     sky130_fd_sc_hd__nand3b_2      51
+     sky130_fd_sc_hd__nand3b_4      12
+     sky130_fd_sc_hd__nor2_2       394
+     sky130_fd_sc_hd__nor2_4         7
+     sky130_fd_sc_hd__nor2b_2        1
+     sky130_fd_sc_hd__nor3_2         6
+     sky130_fd_sc_hd__o2111a_2       1
+     sky130_fd_sc_hd__o211ai_2       4
+     sky130_fd_sc_hd__o21a_2        60
+     sky130_fd_sc_hd__o21ai_2       97
+     sky130_fd_sc_hd__o21ai_4        1
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o21bai_2       6
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o221ai_2       3
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__or2_2        367
+     sky130_fd_sc_hd__or2_4        152
+     sky130_fd_sc_hd__or2b_2        20
+     sky130_fd_sc_hd__or2b_4         1
+     sky130_fd_sc_hd__or3_2          2
+     sky130_fd_sc_hd__or3_4          4
+     sky130_fd_sc_hd__or3b_2         2
+     sky130_fd_sc_hd__or4_2          1
+     sky130_fd_sc_hd__xnor2_2      113
+     sky130_fd_sc_hd__xnor2_4        7
+     sky130_fd_sc_hd__xor2_2        74
+     sky130_fd_sc_hd__xor2_4        14
+
+   Chip area for module '\fir_filter': 61720.444800
+
+62. Executing Verilog backend.
+Dumping module `\fir_filter'.
+
+Warnings: 33 unique messages, 33 total
+End of script. Logfile hash: 008062eee0, CPU: user 4.33s system 0.08s, MEM: 56.09 MB peak
+Yosys 0.30+48 (git sha1 14d50a176d5, gcc 8.3.1 -fPIC -Os)
+Time spent: 41% 2x abc (2 sec), 14% 2x write_verilog (1 sec), ...
