@@ -8,7 +8,7 @@ module tb_fir;
     wire signed [31:0] filter_out;
 
     // Instantiating the Unit Under Test (UUT)
-    fir_new uut (
+    fir_filter uut (
         .clk(clk),
         .rst(rst),
         .filter_in(filter_in),
