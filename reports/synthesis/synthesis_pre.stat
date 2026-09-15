@@ -1,0 +1,25 @@
+
+47. Printing statistics.
+
+=== fir_filter ===
+
+   Number of wires:               4902
+   Number of wire bits:           6193
+   Number of public wires:          19
+   Number of public wire bits:     530
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5689
+     $_ANDNOT_                    1512
+     $_AND_                        113
+     $_DFF_PP0_                    435
+     $_MUX_                          2
+     $_NAND_                        43
+     $_NOR_                        658
+     $_NOT_                        219
+     $_ORNOT_                      354
+     $_OR_                         712
+     $_XNOR_                       215
+     $_XOR_                       1426
+
