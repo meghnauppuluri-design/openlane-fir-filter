@@ -13,13 +13,13 @@ sudo apt install iverilog gtkwave -y
 ### Step 2: Compile the Design and Testbench Files
 Compiled Verilog source (`fir_filter.v`) along with testbench wrapper (`tb_fir.v`), ensuring testbench instance uses the standard identifier **`uut`**
 ```bash
-iverilog -o simulation/sim_out.vvp design/src/fir_filter.v design/src/tb_fir.v
+iverilog -o simulation/fir_sim.vvp design/src/fir_filter.v design/src/tb_fir.v
 ```
 
 ### Step 3: Execute the Simulation Binary
 Ran the compiled simulation file using `vvp` to generate the Value Change Dump (`.vcd`) waveform telemetry file.
 ```bash
-vvp simulation/sim_out.vvp
+vvp simulation/fir_sim.vvp
 ```
 
 ### Step 4: Open and Verify Waveforms in GTKWave
